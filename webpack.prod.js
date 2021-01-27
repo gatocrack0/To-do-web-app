@@ -75,10 +75,5 @@ module.exports = {
             filename: '[name].[contenthash].css',
             ignoreOrder: false
         }),
-        new CopyPlugin({
-            patterns: [
-                { from: 'src/assets', to: 'assets/' },
-            ],
-        }),
     ]
 }
