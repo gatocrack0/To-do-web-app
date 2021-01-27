@@ -19,10 +19,10 @@ export class Todo {
 
     }
 
-    imprimirClase() {
+    // imprimirClase() {
 
-        console.log( `${this.tarea} - ${this.id}` );
+    //     console.log( `${this.tarea} - ${this.id}` );
 
-    }
+    // }
 
 }

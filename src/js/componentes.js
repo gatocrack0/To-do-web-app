@@ -2,11 +2,13 @@ import { Todo } from "../classes";
 import { todoList } from "../index";
 
 // Referencias en el HTML 
-const divTodoList   = document.querySelector( '.todo-list' );
-const txtInput      = document.querySelector( '.new-todo' );
-const btnBorrar     = document.querySelector( '.clear-completed' );
-const ulFiltros     = document.querySelector( '.filters' );
-const anchorFiltros = document.querySelectorAll( '.filtro' );
+const divTodoList    = document.querySelector( '.todo-list' );
+const txtInput       = document.querySelector( '.new-todo' );
+const btnBorrar      = document.querySelector( '.clear-completed' );
+const ulFiltros      = document.querySelector( '.filters' );
+const anchorFiltros  = document.querySelectorAll( '.filtro' );
+//TODO: AGREGAR EL CONTADOR DE PENDIENTES
+const spanPentientes = document.querySelector( '.todo-count' );
 
 export const crearTodoHtml = ( todo ) => {
 

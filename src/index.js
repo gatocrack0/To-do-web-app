@@ -10,4 +10,4 @@ export const todoList = new TodoList();
 // Lo mismo -> / solo funciona con un argumento
 todoList.todos.forEach ( crearTodoHtml );
 
-console.log( 'todos', todoList.todos );
+// console.log( 'todos', todoList.todos );

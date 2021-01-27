@@ -1,14 +1,14 @@
-# Webpack Starter
+# TODO APP
 
-Este es el proyecto inicial para crear aplicaciones utilizando webpack.
+Aplicación de almacenamiento de tareas por hacer generada con NodeJS y WebPack.
 
 ### Notas: 
-Recuerden reconstruir los módulos de Node
+Reconstruir los módulos de Node
 ```
 npm install
 ```
 
-Y para construir el build recuerden:
+Y para construir el build:
 ```
 npm run build
 ```
