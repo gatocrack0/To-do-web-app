@@ -12,3 +12,7 @@ Y para construir el build:
 ```
 npm run build
 ```
+
+
+
+### TODO: Agregar funcionalidad a input con class "check-all"
