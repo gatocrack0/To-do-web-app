@@ -43,7 +43,6 @@ txtInput.addEventListener('keyup', ( event ) => {
         const nuevoTodo = new Todo( txtInput.value );
         todoList.nuevoTodo( nuevoTodo );
         crearTodoHtml( nuevoTodo );
-        actualizarPendientesHtml();
         txtInput.value = '';
     }
 
@@ -57,12 +56,12 @@ divTodoList.addEventListener('click', (event) => {
 
     if ( nombreElemento.includes( 'input' ) ) { // click en checkbox (input)
         todoList.marcarCompletado( todoId );
-        actualizarPendientesHtml();
         todoElemento.classList.toggle('completed');
+        actualizarPendientesHtml();
     } else if( nombreElemento.includes( 'button' ) ) { // click en X (button)
         todoList.eliminarTodo( todoId );
-        actualizarPendientesHtml();
         divTodoList.removeChild( todoElemento );
+        actualizarPendientesHtml();
     }
 
 });
