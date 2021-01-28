@@ -7,8 +7,7 @@ const txtInput       = document.querySelector( '.new-todo' );
 const btnBorrar      = document.querySelector( '.clear-completed' );
 const ulFiltros      = document.querySelector( '.filters' );
 const anchorFiltros  = document.querySelectorAll( '.filtro' );
-//TODO: AGREGAR EL CONTADOR DE PENDIENTES
-const spanPentientes = document.querySelector( '.todo-count' );
+const spanPendientes = document.querySelector( '.todo-count' );
 
 export const crearTodoHtml = ( todo ) => {
 
@@ -19,15 +18,22 @@ export const crearTodoHtml = ( todo ) => {
             <label>${ todo.tarea }</label>
             <button class="destroy"></button>
         </div>
-        <input class="edit" value="Create a TodoMVC template">
     </li>`;
+    // <input class="edit" value="Create a TodoMVC template">
 
     const div = document.createElement( 'div' );
     div.innerHTML = htmlTodo;
     divTodoList.append( div.firstElementChild );
+    actualizarPendientesHtml();
 
     return div.firstElementChild;
 }
+
+const actualizarPendientesHtml = () => {
+    
+    spanPendientes.firstChild.innerHTML = todoList.contarPendientes();
+    
+};
 
 // Eventos
 txtInput.addEventListener('keyup', ( event ) => {
@@ -37,6 +43,7 @@ txtInput.addEventListener('keyup', ( event ) => {
         const nuevoTodo = new Todo( txtInput.value );
         todoList.nuevoTodo( nuevoTodo );
         crearTodoHtml( nuevoTodo );
+        actualizarPendientesHtml();
         txtInput.value = '';
     }
 
@@ -50,9 +57,11 @@ divTodoList.addEventListener('click', (event) => {
 
     if ( nombreElemento.includes( 'input' ) ) { // click en checkbox (input)
         todoList.marcarCompletado( todoId );
+        actualizarPendientesHtml();
         todoElemento.classList.toggle('completed');
     } else if( nombreElemento.includes( 'button' ) ) { // click en X (button)
         todoList.eliminarTodo( todoId );
+        actualizarPendientesHtml();
         divTodoList.removeChild( todoElemento );
     }
 
@@ -105,3 +114,7 @@ ulFiltros.addEventListener('click', ( event ) => {
     }
 
 });
+
+// TODO: HACER TAREA TOGGLE ALL (FLECHA EN HTML) 
+
+
