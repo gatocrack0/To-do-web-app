@@ -1,6 +1,6 @@
 # TODO APP
 
-Aplicación de almacenamiento de tareas por hacer generada con NodeJS y WebPack.
+Aplicación de almacenamiento de tareas por hacer con LocalStorage generada con NodeJS y WebPack.
 
 https://gatocrack0.github.io/todojs/
 
@@ -16,5 +16,3 @@ npm run build
 ```
 
 
-
-### TODO: Agregar funcionalidad a input con class "check-all"
