@@ -2,7 +2,7 @@
 
 Aplicación de almacenamiento de tareas por hacer con LocalStorage generada con NodeJS y WebPack.
 
-https://gatocrack0.github.io/todojs/
+https://gatocrack0.github.io/To-do-web-app/
 
 ### Notas: 
 Reconstruir los módulos de Node
